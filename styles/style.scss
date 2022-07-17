@@ -191,5 +191,40 @@ body {
                 outline: none;
             }
         }
+        .error {
+            border: 1px solid red;
+        }
+        #error__msg {
+            height: 1rem;
+            color: rgb(255, 30, 0);
+            font-size: 1rem;
+        }
+        .results {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            max-width: 40rem;
+            min-height: 30rem;
+            visibility: hidden;
+            transition: 1s;
+            border-radius: 50px;
+            box-shadow: 0 0 10px black;
+            button {
+                display: none;                
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 3rem;
+                font-weight: bold;
+                border-bottom: 1px solid black;
+            }
+        }
     }
 }

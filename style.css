@@ -164,3 +164,32 @@ body {
       cursor: pointer; }
       body .form__container button:focus {
         outline: none; }
+    body .form__container .error {
+      border: 1px solid red; }
+    body .form__container #error__msg {
+      height: 1rem;
+      color: #ff1e00;
+      font-size: 1rem; }
+    body .form__container .results {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      max-width: 40rem;
+      min-height: 30rem;
+      visibility: hidden;
+      transition: 1s;
+      border-radius: 50px;
+      box-shadow: 0 0 10px black; }
+      body .form__container .results button {
+        display: none; }
+      body .form__container .results h1 {
+        font-size: 1.5rem; }
+      body .form__container .results p {
+        font-size: 3rem;
+        font-weight: bold;
+        border-bottom: 1px solid black; }
