@@ -9,10 +9,11 @@
 body {
     width: 100vw;
     min-height: 100vh;
-    background-image: url(../assets/img/bg.webp);
+    background-image: $mainBg;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     #bg__deco {
         position: absolute;
         width: 90%;
@@ -66,7 +67,7 @@ body {
             transition: 0.5s;
             position: absolute;
             z-index: 10;
-            top: -100%;
+            top: -120%;
             display: flex;
             align-items: center;
             justify-content: center;
