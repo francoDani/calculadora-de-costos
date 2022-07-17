@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kranky&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Calculadora de costos</title>
+</head>
+<body>    
+    <header>
+        <div id="icon">
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+        </div>
+        <nav class="menu">            
+            <ul class="menu__list">
+                <h1><a href="../index.html">Cálculo de Factura</a></h1>
+                <li class="list__item"><a href="#">Factura c/impuestos incluidos</a></li>
+                <li class="list__item"><a href="withoutTax.html">Factura s/impuestos incluidos</a></li>
+                <li class="list__item">Ayuda</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form__container">
+        <input type="text" id="batch__cost" class="batch__input" placeholder="total">
+        <input type="text" id="batch__units" class="batch__input" placeholder="cantidad d/unidades">
+        <input type="text" id="gain" class="batch__input" placeholder="% de ganancia">
+        <button>OK</button>
+    </div>    
+    <script src="../scripts/elements.js"></script>
+    <script src="../index.js"></script>
+</body>
+</html>
