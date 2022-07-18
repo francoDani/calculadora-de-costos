@@ -3,4 +3,7 @@ iconMenu.onclick = () => {
 }
 unorderList.onclick = () => {
     menu.classList.remove("show")
-}
+}/* 
+closeBtn.onclick = () => {
+    console.log("asdasd")
+} */

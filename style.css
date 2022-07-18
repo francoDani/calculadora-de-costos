@@ -180,13 +180,17 @@ body {
       flex-direction: column;
       background-color: white;
       max-width: 40rem;
-      min-height: 30rem;
+      min-height: 40rem;
       visibility: hidden;
       transition: 1s;
       border-radius: 50px;
       box-shadow: 0 0 10px black; }
-      body .form__container .results button {
-        display: none; }
+      body .form__container .results #exit__btn {
+        background-color: #bacecf;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem; }
       body .form__container .results h1 {
         font-size: 1.5rem; }
       body .form__container .results p {

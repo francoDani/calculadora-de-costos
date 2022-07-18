@@ -1,3 +1,11 @@
+const roundPrice = (price) => {
+  if(price%10 < 2.99){
+    return price - (price%10);
+  }else{
+    return (price - (price%10)) + 10;
+  }
+}
+
 const calculateWithTax = () => {
   let total = +batchCost.value;
   let units = +batchUnits.value;
@@ -8,12 +16,21 @@ const calculateWithTax = () => {
   if (noBlankFields()) {
     printErrorMsg(true);
     finalCost = total / units;
+    finalCost = finalCost.toFixed(2);
     sellingPrice = finalCost * `1.${gain}`;
+    sellingPrice = roundPrice(sellingPrice);
     pyPrice = sellingPrice * 1.2;
-    resultsWindow.innerHTML = `<h1>COSTO FINAL</h1><p>$${finalCost}</p><h1>PRECIO DE VENTA</h1><p>$${sellingPrice}</p><h1>PRECIO PEDIDOS YA</h1><p>$${pyPrice}</p>`;
+    finalCostResult.innerHTML = finalCost;
+    sellingPriceResult.innerHTML = sellingPrice;
+    pyPriceResult.innerHTML = pyPrice;    
     showResultWindow();
+    clearFieldsValues()
   } else printErrorMsg(false);
 };
 calculate.onclick = function () {
   calculateWithTax();
 };
+
+const close = () => {
+  hideResultWindow()
+}

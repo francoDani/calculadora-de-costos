@@ -209,13 +209,17 @@ body {
             flex-direction: column;
             background-color: white;
             max-width: 40rem;
-            min-height: 30rem;
+            min-height: 40rem;
             visibility: hidden;
             transition: 1s;
             border-radius: 50px;
             box-shadow: 0 0 10px black;
-            button {
-                display: none;                
+            #exit__btn{
+                background-color: $lightGreen;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 2rem;
             }
             h1 {
                 font-size: 1.5rem;
