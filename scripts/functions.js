@@ -27,10 +27,26 @@ const calculateWithTax = () => {
     clearFieldsValues()
   } else printErrorMsg(false);
 };
-calculate.onclick = function () {
-  calculateWithTax();
-};
-
 const close = () => {
   hideResultWindow()
+}
+
+const calculatePriceWt = (tax) => {
+  tax = +tax;
+  let batchCostWtValue = +(batchCostWt.value);
+  let batchUnitsWtValue = +(batchUnitsWt.value);
+  let batchGainWtValue = +(batchGainWt.value);
+  if (noBlankFieldsWt()) {
+    printErrorMsg(true);
+    finalCostWt = batchCostWtValue/batchUnitsWtValue*tax;
+    finalCostWt.toFixed(2);
+    sellingPriceWt = finalCostWt * `1.${batchGainWtValue}`;
+    sellingPriceWt = roundPrice(sellingPriceWt);
+    pyPriceWt = sellingPriceWt * 1.2;
+    pyPriceResultWt.innerHTML = pyPriceWt;
+    finalCostResultWt.innerHTML = finalCostWt;
+    sellingPriceResultWt.innerHTML = sellingPriceWt;
+    showResultWindowWt();
+    clearFieldsValuesWt();
+  }else printErrorMsg(false)
 }

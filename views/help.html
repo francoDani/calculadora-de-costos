@@ -21,38 +21,25 @@
             <ul class="menu__list">
                 <h1><a href="../index.html">Cálculo de Factura</a></h1>
                 <li class="list__item"><a href="withTax.html">Factura c/impuestos incluidos</a></li>
-                <li class="list__item"><a href="#">Factura s/impuestos incluidos</a></li>
-                <li class="list__item"><a href="help.html">Ayuda</a></li>
+                <li class="list__item"><a href="withoutTax.html">Factura s/impuestos incluidos</a></li>
+                <li class="list__item"><a href="#">Ayuda</a></li>
             </ul>
         </nav>
     </header>
-    <div class="form__container">
-        <input type="number" id="total" class="invoice__input" placeholder="total de la factura">
-        <input type="number" id="sub__total" class="invoice__input" placeholder="sub-total de la factura">
-        <div class="tax__container">
-            <p class="text">Impuesto <span id="invoice__result"></span></p>
-            <button id="tax__button">calcular</button>
-        </div>
-        <input type="number" id="batch__cost--wt" class="batch__input" value="" placeholder="total">
-        <input type="number" id="batch__units--wt" class="batch__input" placeholder="cantidad d/unidades">
-        <input type="number" id="gain--wt" class="batch__input" placeholder="% de ganancia">
-        <p id="error__msg"></p>
-        <button id="calculate--wt">OK</button>
-        <div class="results" id="results--wt">
-            <h1 id="final__cost">COSTO FINAL</h1>
-            <p id="final__cost--resultwt"></p>
-            <h1 id="selling__price">PRECIO DE VENTA</h1>
-            <p id="selling__price--resultwt"></p>
-            <h1 id="py__price">PRECIO PEDIDOS YA</h1>
-            <p id="py__price--resultwt"></p>
-            <button id="exit__btn--wt" onclick="hideResultWindowWt()">X</button>
-        </div>
+    <div class="help__container">
+        <h1>Preguntas frecuentes</h1>
+        <h2>Para que sirve?</h2>
+        <p>Esta web fué creada para facilitar el proceso de calcular costos, precio de venta, y en caso de contar con pedidos ya, precio de venta por pedidos ya, para pequeños emprendimientos</p>
+        <h2>Factura c/impuestos incluidos</h2>
+        <p>Desde el menú de navegación podrás acceder a "Factura c/impuestos incluidos" donde podrás hacer un calculo sencillo con el dato de la cantidad de unidades, el costo del lote y el porcentaje de ganancia deseado</p>
+        <h2>Factura s/impuestos incluidos</h2>
+        <p>Hay casos donde existen impuestos internos dentro de los proveedores y el monto no es detallado en la factura, usualmente estas boletas contienen un valor "total" y un "subtotal", estos valores deben ser ingresados para el calculo de impuestos internos, una vez que se tiene el calculo de impuestos internos se puede proceder al calculo de costo y precio de venta donde se le sumará el impuesto interno al costo del producto</p>
     </div>    
     <script src="../scripts/elements.js"></script>
     <script src="../scripts/validations.js"></script>
     <script src="../scripts/functions.js"></script>
     <script src="../scripts/front.js"></script>
-    <script src="../scripts/withoutTaxEvents.js"></script>
+    <script src="../scripts/withTaxEvents.js"></script>
     <script src="../index.js"></script>
 </body>
 </html>

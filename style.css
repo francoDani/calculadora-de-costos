@@ -21,7 +21,7 @@ body {
     position: absolute;
     width: 90%;
     height: 80%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50px;
     left: 50%;
     top: 50%;
@@ -137,11 +137,20 @@ body {
         color: rgba(255, 255, 255, 0.8); }
       body .form__container .invoice__input:focus {
         outline: none; }
+    body .form__container .tax__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; }
+    body .form__container #tax__button {
+      width: 5rem; }
     body .form__container .text {
       color: white;
       font-size: 1.5rem;
-      width: 100%;
-      padding-left: 2rem; }
+      padding-left: 2rem;
+      position: absolute;
+      left: 2rem; }
     body .form__container .batch__input {
       border: none;
       width: 80%;
@@ -153,6 +162,8 @@ body {
         color: #bacecf; }
       body .form__container .batch__input:focus {
         outline: none; }
+    body .form__container .warning {
+      color: red; }
     body .form__container button {
       width: 3rem;
       height: 3rem;
@@ -185,7 +196,7 @@ body {
       transition: 1s;
       border-radius: 50px;
       box-shadow: 0 0 10px black; }
-      body .form__container .results #exit__btn {
+      body .form__container .results #exit__btn, body .form__container .results #exit__btn--wt {
         background-color: #bacecf;
         position: absolute;
         top: 0;
@@ -197,3 +208,25 @@ body {
         font-size: 3rem;
         font-weight: bold;
         border-bottom: 1px solid black; }
+  body .help__container {
+    background-color: #496b6a;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    padding: 2rem; }
+    body .help__container h1 {
+      color: white;
+      font-size: 2.5rem; }
+    body .help__container h2 {
+      font-size: 2rem; }
+    body .help__container p {
+      color: white;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #dbffe7;
+      padding-bottom: 2rem; }

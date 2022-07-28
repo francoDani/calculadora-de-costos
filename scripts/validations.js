@@ -7,19 +7,17 @@ const noBlankFields = () => {
         return true;
     }else return false;
 }
+const noBlankFieldsWt = () => {
+    let total = +(batchCostWt.value);
+    let units = +(batchUnitsWt.value);
+    let gain = +(batchGainWt.value);
+    if(total && units && gain && taxes) {
+        return true;
+    }else return false;
+}
 const printErrorMsg = (v) => {
     (v) ? errorMsg.innerHTML = "" : errorMsg.innerHTML = 'Debe completar todos los campos';
 }
 const printError = (field) => {
     (field.value == "") ? field.classList.add('error') : field.classList.remove('error');
-}
-
-batchCost.onchange = function(){
-    printError(batchCost);
-}
-batchUnits.onchange =function(){
-    printError(batchUnits);
-}
-batchGain.onchange =function(){
-    printError(batchGain);
 }

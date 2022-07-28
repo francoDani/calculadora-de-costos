@@ -24,7 +24,7 @@ body {
         position: absolute;
         width: 90%;
         height: 80%;
-        background-color: rgba($color: #fff, $alpha: 0.5);
+        background-color: rgba($color: #fff, $alpha: 0.8);
         border-radius: 50px;
         left: 50%;
         top: 50%;
@@ -158,11 +158,22 @@ body {
                 outline: none;
             }
         }
+        .tax__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        #tax__button {            
+            width: 5rem;
+        }
         .text {
             color: white;
-            font-size: 1.5rem;
-            width: 100%;
+            font-size: 1.5rem;            
             padding-left: 2rem;
+            position: absolute;
+            left: 2rem;
         }
         .batch__input {
             border: none;
@@ -177,6 +188,9 @@ body {
             &:focus {
                 outline: none;
             }
+        }
+        .warning {
+            color: red;
         }
         button {
             width: 3rem;
@@ -214,7 +228,7 @@ body {
             transition: 1s;
             border-radius: 50px;
             box-shadow: 0 0 10px black;
-            #exit__btn{
+            #exit__btn, #exit__btn--wt {
                 background-color: $lightGreen;
                 position: absolute;
                 top: 0;
@@ -229,6 +243,32 @@ body {
                 font-weight: bold;
                 border-bottom: 1px solid black;
             }
+        }
+    }
+    .help__container {
+        background-color: $deepGreen;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        position: absolute;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        padding: 2rem;
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            color: white;
+            font-size: 1.3rem;
+            border-bottom: 1px solid $white;
+            padding-bottom: 2rem;
         }
     }
 }
