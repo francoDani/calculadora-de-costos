@@ -164,9 +164,12 @@ body {
             justify-content: center;
             align-items: center;
             position: relative;
-        }
-        #tax__button {            
-            width: 5rem;
+            @media screen and (max-width: 500px){
+                flex-direction: column;
+            }
+            #tax__button {            
+                width: 5rem;
+            }
         }
         .text {
             color: white;
@@ -174,6 +177,13 @@ body {
             padding-left: 2rem;
             position: absolute;
             left: 2rem;
+            @media screen and (max-width: 500px){
+                position: relative;
+                width: 100%;
+            }
+            span {
+                font-size: 1rem;
+            }
         }
         .batch__input {
             border: none;

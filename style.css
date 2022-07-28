@@ -143,14 +143,23 @@ body {
       justify-content: center;
       align-items: center;
       position: relative; }
-    body .form__container #tax__button {
-      width: 5rem; }
+      @media screen and (max-width: 500px) {
+        body .form__container .tax__container {
+          flex-direction: column; } }
+      body .form__container .tax__container #tax__button {
+        width: 5rem; }
     body .form__container .text {
       color: white;
       font-size: 1.5rem;
       padding-left: 2rem;
       position: absolute;
       left: 2rem; }
+      @media screen and (max-width: 500px) {
+        body .form__container .text {
+          position: relative;
+          width: 100%; } }
+      body .form__container .text span {
+        font-size: 1rem; }
     body .form__container .batch__input {
       border: none;
       width: 80%;
