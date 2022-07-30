@@ -13,7 +13,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
     background-color: $lightGreen;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -258,8 +257,7 @@ body {
     .help__container {
         background-color: $deepGreen;
         display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        align-items: center;        
         flex-direction: column;
         height: 80vh;
         width: 100%;
@@ -267,6 +265,7 @@ body {
         bottom: 50%;
         transform: translate(0, 50%);
         padding: 2rem;
+        overflow: auto;
         h1 {
             color: white;
             font-size: 2.5rem;
@@ -279,6 +278,92 @@ body {
             font-size: 1.3rem;
             border-bottom: 1px solid $white;
             padding-bottom: 2rem;
+        }
+    }
+    #table__container {
+        background-color: $deepGreen;
+        display: flex;
+        align-items: center;        
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        position: absolute;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        padding: 2rem;
+        .search__section {
+            width: 100%;
+            padding: 1rem;
+            margin: .5rem;
+            background-color: $white;
+            input {
+                padding: 0.3rem;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .error {
+            border: $warning;
+        }
+        .tittle {
+            text-align: center;
+            font-size: 2rem;
+        }
+        h3 {
+            text-align: center;
+        }
+        .new__product {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 2rem;
+            background-color: $white;
+            padding: 1rem;
+            .new__product-input {
+                padding: 0.3rem;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                background-color: $lightGreen;
+                padding: 0.5rem;
+                border: solid 2px $bg_hover;
+                font-weight: bold;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover {
+                    color: whitesmoke;
+                    background-color: $bg_hover;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            .error {
+                border: $warning;
+            }
+        }
+        .error__msg {
+            text-align: center;
+            color: red;
+            visibility: hidden;
+        }
+        .show {
+            visibility: visible;
+        }
+        table {
+            text-align: center;
+            border: solid 2px $bg_hover;
+            th {
+                background-color: $bg_hover;
+                color: whitesmoke;
+                padding: .5rem;
+            }
+            td {
+                border: solid 2px $lightGreen;
+                padding: .5rem;
+            }
         }
     }
 }

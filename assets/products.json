@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Coca Cola",
+        "category": "bebidas",
+        "cost": 180,
+        "margin": 30
+    },
+    {
+        "name": "Pepsi",
+        "category": "bebidas",
+        "cost": 150,
+        "margin": 30
+    },
+    {
+        "name": "Cepita",
+        "category": "bebidas",
+        "cost": 130,
+        "margin": 30
+    },
+    {
+        "name": "Arroz",
+        "category": "comestibles",
+        "cost": 90,
+        "margin": 20
+    },
+    {
+        "name": "Tallarines",
+        "category": "comestibles",
+        "cost": 100,
+        "margin": 20
+    },
+    {
+        "name": "Polenta",
+        "category": "comestibles",
+        "cost": 110,
+        "margin": 20
+    },
+    {
+        "name": "Puré de tomate",
+        "category": "comestibles",
+        "cost": 80,
+        "margin": 20
+    },
+    {
+        "name": "Coffler block",
+        "category": "golosinas",
+        "cost": 150,
+        "margin": 20
+    },
+    {
+        "name": "Beldent",
+        "category": "golosinas",
+        "cost": 130,
+        "margin": 20
+    }
+]
