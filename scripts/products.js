@@ -10,7 +10,7 @@ class Product {
     this.margin = margin;
     this.price = price;
     this.calculatePrice = function () {
-      this.price = cost + (cost * margin) / 100;
+      this.price = (cost + (cost * margin) / 100).toFixed(2);
     };
   }
 }
