@@ -44,7 +44,7 @@ const calculatePriceWt = (tax) => {
     sellingPriceWt = roundPrice(sellingPriceWt);
     pyPriceWt = sellingPriceWt * 1.2;
     pyPriceResultWt.innerHTML = pyPriceWt;
-    finalCostResultWt.innerHTML = finalCostWt;
+    finalCostResultWt.innerHTML = finalCostWt.toFixed(2);
     sellingPriceResultWt.innerHTML = sellingPriceWt;
     showResultWindowWt();
     clearFieldsValuesWt();
