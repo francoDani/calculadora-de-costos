@@ -22,7 +22,8 @@ const calculateWithTax = () => {
     pyPrice = sellingPrice * 1.2;
     finalCostResult.innerHTML = finalCost;
     sellingPriceResult.innerHTML = sellingPrice;
-    pyPriceResult.innerHTML = pyPrice;    
+    pyPriceResult.innerHTML = pyPrice;
+    copyToClipboard(finalCost, sellingPrice, pyPrice);
     showResultWindow();
     clearFieldsValues()
   } else printErrorMsg(false);
@@ -46,7 +47,19 @@ const calculatePriceWt = (tax) => {
     pyPriceResultWt.innerHTML = pyPriceWt;
     finalCostResultWt.innerHTML = finalCostWt.toFixed(2);
     sellingPriceResultWt.innerHTML = sellingPriceWt;
+    copyToClipboard(finalCostWt.toFixed(2), sellingPriceWt, pyPriceWt);
     showResultWindowWt();
     clearFieldsValuesWt();
   }else printErrorMsg(false)
+}
+
+const copyToClipboard = (cost, sell, pya) => {
+  let result = `Costo $${cost} | Venta $${sell} | Pya $${pya}`;
+  navigator.clipboard.writeText(result)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
 }
